@@ -7,11 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="300">
     <Grid>
-        <StackPanel>
-            <Image Height="50" Source="/Assets/logo-256.png" />
-            <TextBlock x:Name="DisplayName">Amir Fahmideh</TextBlock>
-            <TextBlock x:Name="Email">amir.fahmideh@gmail.com</TextBlock>
-            <Button Click="Button_Click">Sign out</Button>
+        <StackPanel Margin="10,10,10,10">
+            <TextBlock x:Name="DisplayName" Margin="0,5,0,0">Amir Fahmideh</TextBlock>
+            <TextBlock x:Name="Email" Margin="0,5,0,0">amir.fahmideh@gmail.com</TextBlock>
+            <Button Click="Button_Click" Margin="0,5,0,0">Sign out</Button>
         </StackPanel>
     </Grid>
 </UserControl>

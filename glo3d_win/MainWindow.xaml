@@ -11,14 +11,22 @@
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition MinWidth="200" MaxWidth="300" />
-                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="180" MinWidth="180" MaxWidth="300" />
+                <ColumnDefinition Width="3" />
                 <ColumnDefinition Width="*" MinWidth="640" />
             </Grid.ColumnDefinitions>
-            <Frame x:Name="_leftFrame" NavigationUIVisibility="Hidden" Grid.Column="0"></Frame>
-            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+            <DockPanel Grid.Column="0">
+                <StackPanel>
+                    <Image Height="50" Source="/Assets/logo-256.png" Margin="0,5,0,0" />
+                    <Frame Height="auto" x:Name="_leftFrame" NavigationUIVisibility="Hidden"></Frame>
+                <Button Margin="10,0,10,0" Click="Button_Click">Exit</Button>
+                </StackPanel>
+            </DockPanel>
+
+            <GridSplitter Grid.Column="1" Width="3" HorizontalAlignment="Stretch" />
+
             <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" Grid.Column="2" Padding="10" Margin="10">
-                
+
             </Frame>
         </Grid>
         
