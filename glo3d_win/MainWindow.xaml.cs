@@ -55,9 +55,16 @@ namespace glo3d_win
                 }
                 else if ((_mainFrame.Content == null || _mainFrame.Content.GetType() != typeof(MainPage)))
                 {
-                    _leftFrame.Navigate(new NavigationMenu());
+                    var navigationMenu = new NavigationMenu();
+                    navigationMenu.OnMenuClick += NavigationMenu_OnMenuClick;
+                    _leftFrame.Navigate(navigationMenu);
                 }
             });
+        }
+
+        private void NavigationMenu_OnMenuClick(object sender)
+        {
+            _mainFrame.Navigate(sender);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

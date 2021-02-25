@@ -14,22 +14,13 @@ using System.Windows.Shapes;
 namespace glo3d_win
 {
     /// <summary>
-    /// Interaction logic for NavigationMenu.xaml
+    /// Interaction logic for SampleData.xaml
     /// </summary>
-    public partial class NavigationMenu : UserControl
+    public partial class SampleData : Page
     {
-        public delegate void OnMenuClickHandler(object? sender);
-        public event OnMenuClickHandler OnMenuClick;
-        public NavigationMenu()
+        public SampleData()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (OnMenuClick != null) {
-                OnMenuClick(new SampleData());
-            }
         }
     }
 }
