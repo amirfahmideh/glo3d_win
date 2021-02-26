@@ -21,7 +21,7 @@ namespace glo3d_win.Firebase.Common
                 ProjectNumber = "golden-quote",
                 ApiKey = "AIzaSyAAHxz0NYoJpOWRgKuNsoECqTTSbYkCwy0",
                 ApplicationDomain = "golden-quote.firebaseapp.com",
-                DatabaseDomain = "golden-quote.firebaseio.com"
+                DatabaseDomain = "https://golden-quote.firebaseio.com/"
                 //ApplicationDomain = "localhost",
             };
         }

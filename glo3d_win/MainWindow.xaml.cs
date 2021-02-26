@@ -53,7 +53,7 @@ namespace glo3d_win
                 {
                     _leftFrame.Navigate(null);
                 }
-                else if ((_mainFrame.Content == null || _mainFrame.Content.GetType() != typeof(MainPage)))
+                else
                 {
                     var navigationMenu = new NavigationMenu();
                     navigationMenu.OnMenuClick += NavigationMenu_OnMenuClick;
@@ -64,7 +64,8 @@ namespace glo3d_win
 
         private void NavigationMenu_OnMenuClick(object sender)
         {
-            _mainFrame.Navigate(sender);
+            if (_mainFrame.Content != null && _mainFrame.Content.GetType() != sender.GetType())
+                _mainFrame.Navigate(sender);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

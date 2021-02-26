@@ -1,4 +1,6 @@
-﻿using System;
+﻿using glo3d_win.DTO;
+using glo3d_win.Firebase.Database;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +23,28 @@ namespace glo3d_win
         public SampleData()
         {
             InitializeComponent();
+            GetAllData();
+        }
+        private async void GetAllData()
+        {
+            try
+            {
+                QueryHelper qHelper = new QueryHelper("cars");
+                var allItems = await qHelper.Items<CarDTO>();
+
+                List<CarDTO> listOfCars = new List<CarDTO>();
+                foreach (var item in allItems)
+                {
+                    listOfCars.Add(item.Object);
+                }
+
+                CarsDataGrid.AutoGenerateColumns = true;
+                CarsDataGrid.ItemsSource = listOfCars;
+            }
+            catch (Exception e) {
+                Console.Write(e.Message);
+            }
         }
     }
+  
 }

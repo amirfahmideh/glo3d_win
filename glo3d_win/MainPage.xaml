@@ -12,31 +12,15 @@
         <StackPanel.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="Margin" Value="3" />
+                <Setter Property="FontSize" Value="20"></Setter>
             </Style>
         </StackPanel.Resources>
 
-        <Image 
-            x:Name="ProfileImage"
-            Height="100"
-            Width="100"
-            />
 
-        <TextBlock 
-            x:Name="UidTextBlock"
-            />
-        <TextBlock 
-            x:Name="NameTextBlock"
-            />
-        <TextBlock 
-            x:Name="EmailTextBlock" 
-            />
-        <TextBlock 
-            x:Name="ProviderTextBlock" 
-            />
-        <Button 
-            Click="SignOutClick"
-            Content="Sign out"
-            Padding="18 3"
-            />
+        <Image Height="50" Source="/Assets/logo-256.png" Margin="0,5,0,0" ></Image>
+
+
+        <TextBlock>Welcome to Glod3D</TextBlock>
+
     </StackPanel>
 </Page>
