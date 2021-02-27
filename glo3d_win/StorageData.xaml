@@ -29,5 +29,8 @@
                 </Hyperlink>
             </Label>
         </StackPanel>
+        <DataGrid Name="StorageDataGrid" Grid.Row="3">
+            
+        </DataGrid>
     </Grid>
 </Page>
