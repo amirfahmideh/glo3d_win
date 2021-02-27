@@ -9,17 +9,13 @@
       Title="SampleData">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" FontSize="22">Cars</Label>
-        <DataGrid Name="CarsDataGrid" Grid.Row="1">
-            <!--<DataGrid.Columns>
-                <DataGridTextColumn Header="Name"></DataGridTextColumn>
-                <DataGridTextColumn Header="Color"></DataGridTextColumn>
-                <DataGridTextColumn Header="Year"></DataGridTextColumn>
-                <DataGridTextColumn Header="Seat Number"></DataGridTextColumn>
-            </DataGrid.Columns>-->
+        <Label Grid.Row="1" FontSize="18" Foreground="Gray">Get cars information from firebase realtime storage!</Label>
+        <DataGrid Name="CarsDataGrid" Grid.Row="2">
         </DataGrid>
     </Grid>
 </Page>

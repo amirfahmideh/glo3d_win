@@ -13,6 +13,7 @@ namespace glo3d_win.Firebase.Common
         public string ApiKey { get; set; }
         public string ApplicationDomain { get; set; }
         public string DatabaseDomain { get; set; }
+        public string StorageDomain { get; set; }
 
         public static Config GetDefaultConfig() {
             return new Config()
@@ -21,7 +22,8 @@ namespace glo3d_win.Firebase.Common
                 ProjectNumber = "golden-quote",
                 ApiKey = "AIzaSyAAHxz0NYoJpOWRgKuNsoECqTTSbYkCwy0",
                 ApplicationDomain = "golden-quote.firebaseapp.com",
-                DatabaseDomain = "https://golden-quote.firebaseio.com/"
+                DatabaseDomain = "https://golden-quote.firebaseio.com/",
+                StorageDomain = "golden-quote.appspot.com"
                 //ApplicationDomain = "localhost",
             };
         }

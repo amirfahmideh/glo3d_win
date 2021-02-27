@@ -10,9 +10,12 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <local:LoginInfo Grid.Row="0"></local:LoginInfo>
-        <Button Grid.Row="1" Height="30" Margin="10" Foreground="Black" Background="{x:Null}" Click="Button_Click">Sample Data</Button>
+        <Button Name="SampleData" Grid.Row="1" Height="30" Margin="10,10,10,0" Foreground="Black" Background="{x:Null}" Click="Button_Click">Sample Data</Button>
+        <Button Name="StorageData" Grid.Row="2" Height="30" Margin="10,5,10,0" Foreground="Black" Background="{x:Null}" Click="Button_Click">Storage Data</Button>
+
     </Grid>
 </UserControl>

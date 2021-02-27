@@ -27,9 +27,30 @@ namespace glo3d_win
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (OnMenuClick != null) {
-                OnMenuClick(new SampleData());
+            var clickedButton = (Button)sender;
+            switch (clickedButton.Name)
+            {
+                case "SampleData":
+                    {
+                        if (OnMenuClick != null)
+                        {
+                            OnMenuClick(new SampleData());
+                        }
+                        break;
+                    }
+                case "StorageData":
+                    {
+                        if (OnMenuClick != null)
+                        {
+                            OnMenuClick(new StorageData());
+                        }
+                        break;
+                    }
+                default:
+                    break;
             }
+
+
         }
     }
 }
