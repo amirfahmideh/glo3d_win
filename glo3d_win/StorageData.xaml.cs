@@ -30,8 +30,11 @@ namespace glo3d_win
         }
 
         private async void LoadAllSelectedFolder() {
-            StorageHelper stHelper = new StorageHelper();
-            StorageDataGrid.ItemsSource = await stHelper.ListOfFilePrefix("amir","test");
+
+            StorageDataGrid.Visibility = Visibility.Hidden;
+
+            //StorageHelper stHelper = new StorageHelper();
+            //StorageDataGrid.ItemsSource = await stHelper.ListOfFilePrefix("amir","test");
         }
 
         private void SelectFileButton_Click(object sender, RoutedEventArgs e)

@@ -73,5 +73,16 @@ namespace glo3d_win.Firebase.Storage
             else return null;
 
         }
+
+        public async Task<string> GetFilePath(params string[] path) {
+            var firebaseStorage = new FirebaseStorage(_storagePath, _option);
+            FirebaseStorageReference refrenceStorage = firebaseStorage.Child(path[0]);
+            foreach (var p in path.Skip(1))
+            {
+                refrenceStorage = refrenceStorage.Child(p);
+            }
+           
+            return await refrenceStorage.GetDownloadUrlAsync();
+        }
     }
 }

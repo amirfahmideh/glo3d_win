@@ -32,18 +32,16 @@ namespace glo3d_win
             {
                 case "SampleData":
                     {
-                        if (OnMenuClick != null)
-                        {
-                            OnMenuClick(new SampleData());
-                        }
+                        OnMenuClick?.Invoke(new SampleData());
                         break;
                     }
                 case "StorageData":
                     {
-                        if (OnMenuClick != null)
-                        {
-                            OnMenuClick(new StorageData());
-                        }
+                        OnMenuClick?.Invoke(new StorageData());
+                        break;
+                    }
+                case "EditPhoto": {
+                        OnMenuClick?.Invoke(new EditPhoto("Sample.png"));
                         break;
                     }
                 default:
